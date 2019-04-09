@@ -22,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        String [] rawData = {"leif", "ulla", "kjell"};
-
-        List<String> listData = new ArrayList<String>(Arrays.asList(rawData));
+        List<String> listData = new ArrayList<String>(Arrays.asList(mountainNames));
 
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), R.layout.list_item_textview,R.id.my_item_textview, listData);
 
