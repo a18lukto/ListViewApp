@@ -4,6 +4,6 @@
     android:layout_height="match_parent"
     android:id="@+id/my_item_textview"
     android:layout_margin="10dp"
-    android:textSize="145dp">
+    android:textSize="45dp">
 
 </TextView>
