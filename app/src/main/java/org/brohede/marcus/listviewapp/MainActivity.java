@@ -49,14 +49,17 @@ public class MainActivity extends AppCompatActivity {
          //   }
        // });
 
+        //kopplar listan med hjälp av en adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_item_textview,listData);
 
         ListView my_listView=(ListView) findViewById(R.id.my_listview);
 
         my_listView.setAdapter(adapter);
+        //Gör så att Toasten kommer fram när man clickar på någon av raderna
         my_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //Då tar man contexten och den information som tillhör och visar den datan, i ordningen namn, höjd, plats och land.
                 Toast.makeText(getApplicationContext(),"Name:  "+mountainNames[i]+"\n"+"Heigth:  "+mountainHeights[i]+"\n"+"Location:  "+mountainLocations[i]+"\n"+"Country:  "+mountainCountry[i],Toast.LENGTH_SHORT).show();
             }
         });
