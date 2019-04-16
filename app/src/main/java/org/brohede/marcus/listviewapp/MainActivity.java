@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
     private String[] mountainLocations = {"Alps","Alps","Alaska"};
     private int[] mountainHeights ={4478,4808,6190};
+    private String[]mountainCountry ={"Schweiz","Frankrike/Italien","USA"};
+
     // Create ArrayLists from the raw data above and use these lists when populating your ListView.
     private ArrayList<String> listData;
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         //adapter.add("Lukas");
 
-        String[] gustav = new String[]{"Hej","På", "Dig!"};
+        String[] gustav = new String[]{"Welcome To MountainFacts"};
         Toast.makeText(getApplicationContext(),Arrays.toString(gustav),Toast.LENGTH_SHORT).show();
 
       //  myListView.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         my_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(),"Name:  "+mountainNames[i]+"\n"+"Heigth:  "+mountainHeights[i]+"\n"+"Location:  "+mountainLocations[i],Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Name:  "+mountainNames[i]+"\n"+"Heigth:  "+mountainHeights[i]+"\n"+"Location:  "+mountainLocations[i]+"\n"+"Country:  "+mountainCountry[i],Toast.LENGTH_SHORT).show();
             }
         });
         // The onCreate method is run when the app is created.
