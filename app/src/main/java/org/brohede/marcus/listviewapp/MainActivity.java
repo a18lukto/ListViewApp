@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
            //     Toast.makeText(getApplicationContext(),"name:"+mountainNames[i],Toast.LENGTH_SHORT).show();
          //   }
        // });
-
+//Hej
         //kopplar listan med hjälp av en adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_item_textview,listData);
 
